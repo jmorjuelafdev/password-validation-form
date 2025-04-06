@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Register & password validation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <h1>Registro de Usuario</h1>
+  <div class="container">
+    <form id="myForm">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password">
+
+        <div class="validation-rules" id="rulesBox">
+          <div class="rule">
+            <span id="lengthRule" class="icon failure"></span>
+            Mínimo 6 caracteres
+          </div>
+          <div class="rule">
+            <span id="uppercaseRule" class="icon failure"></span>
+            Una mayúscula (A-Z)
+          </div>
+          <div class="rule">
+            <span id="lowercaseRule" class="icon failure"></span>
+            Una minúscula (a-z)
+          </div>
+          <div class="rule">
+            <span id="numberRule" class="icon failure"></span>
+            Un número (0-9)
+          </div>
+          <div class="rule">
+            <span id="especialRule" class="icon failure"></span>
+            Un carácter especial (#?!@$%^&*-)
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirmar contraseña:</label>
+        <input type="password" id="confirmPassword">
+      </div>
+
+      <!-- Aquí se muestran los errores -->
+      <ul id="errorMessages" class="error-list"></ul>
+
+      <button type="submit" id="submitBtn" disabled>Enviar</button>
+    </form>
+
+    <div id="finalMessage" class="mensaje" style="display: none;">✅ Registro exitoso</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

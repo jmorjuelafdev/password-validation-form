@@ -1,0 +1,170 @@
+body {
+  background-color: #222;
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 350px;
+  border: 1px solid #9d9d9d;
+  padding: 10px 20px 40px;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+input:focus {
+  border-color: #04aa6d;
+  outline: none;
+  box-shadow: 0 0 5px #04aa6d80;
+}
+
+.validation-rules {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  margin-top: 10px;
+  display: none; /* OCULTO al inicio */
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 16px;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+.failure, .success {
+  background-color:transparent;
+}
+
+.icon.failure::before {
+  content: "❌";
+  color: red;
+  margin-right: 5px;
+}
+.icon.success::before {
+  content: "✔️";
+  color: green;
+  margin-right: 5px;
+}
+
+#submitBtn {
+  padding: 10px 15px;
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#submitBtn:hover {
+  background-color: #026944;
+}
+
+#submitBtn:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.mensaje {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+  font-size: 1.1em;
+}
+
+.error-list {
+  color: #ff0000;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.error-list li {
+  margin-bottom: 4px;
+}
+/* Media queries para responsividad */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 20px 15px;
+    border-width: 1px 0;
+    border-radius: 0;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  button {
+    padding: 12px 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    padding: 15px 10px;
+  }
+  
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  input {
+    padding: 10px 8px;
+  }
+  
+  .validation-rules {
+    padding: 8px;
+  }
+}
